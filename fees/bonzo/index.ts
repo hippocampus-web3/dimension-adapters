@@ -2,7 +2,7 @@ import BigNumber from "bignumber.js";
 import { httpGet } from "../../utils/fetchURL";
 
 const fetch = async () => {
-    const res = await httpGet("https://data.bonzo.finance/stats");
+    const res = await httpGet("https://mainnet-data.bonzo.finance/stats");
     const timestamp = parseFloat(res.timestamp_end);
     // Portion of intrest payments sent to the protocol over the 24hr period.
     const total_protocol_fees = new BigNumber(res.total_protocol_fees.usd_wad);
@@ -41,17 +41,15 @@ const adapter = {
     adapter: {
         hedera: {
             fetch,
-            start: () => 1722534378,
+            start: 1722534378,
             runAtCurrTime: true,
-            meta: {
-                methodology: {
-                    Fees: 'Interest and Flash Loan fees plus liquidation bonuses in USD',
-                    UserFees: 'Interest and Flash Loan fees plus liquidation bonuses in USD',
-                    ProtocolRevenue: 'Portion of interest rate fees and flash loan fees to Protocol Treasury in USD',
-                    SupplySideRevenue: 'Portion of interest rate fees to liquidity providers in USD'
-                }
-            }
         }
+    },
+    methodology: {
+        Fees: 'Interest and Flash Loan fees plus liquidation bonuses in USD',
+        UserFees: 'Interest and Flash Loan fees plus liquidation bonuses in USD',
+        ProtocolRevenue: 'Portion of interest rate fees and flash loan fees to Protocol Treasury in USD',
+        SupplySideRevenue: 'Portion of interest rate fees to liquidity providers in USD'
     }
 };
 

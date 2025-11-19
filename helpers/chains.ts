@@ -1,6 +1,14 @@
 // Use
 export enum CHAIN {
+  PACASWAP = "pacaswap",
+  PEAQ = "peaq",
+  CHROMIA = "chromia",
+  OFF_CHAIN = "off_chain",
+  GATE_LAYER = "gatelayer",
+  ZK_LIGHTER = "zklighter",
+  GALA = "gala",
   TARA = "tara",
+  PROTON = "proton",
   ARBITRUM = "arbitrum",
   ASSETCHAIN = "assetchain",
   AVAX = "avax",
@@ -53,6 +61,7 @@ export enum CHAIN {
   GODWOKEN_V1 = "godwoken_v1",
   FUSE = "fuse",
   SX = "sx",
+  SXR = "sxr",
   ELROND = "elrond",
   DEFICHAIN = "defichain",
   CUBE = "cube",
@@ -167,7 +176,7 @@ export enum CHAIN {
   PLANQ = "planq",
   BOB = "bob",
   TAIKO = "taiko",
-  SKALE_EUROPA = "skale_europa",
+  SKALE_EUROPA = "europa",
   IOTAEVM = "iotaevm",
   ZKLINK = "zklink",
   DEXALOT = "dexalot",
@@ -181,6 +190,7 @@ export enum CHAIN {
   LISK = "lisk",
   MINT = "mint",
   HELA = "hela",
+  KASPLEX = "kasplex",
   FUEL = "fuel",
   REAL = "real",
   CELESTIA = "celestia",
@@ -219,8 +229,8 @@ export enum CHAIN {
   PENUMBRA = "penumbra",
   BERACHAIN = "berachain",
   UNICHAIN = "unichain",
-  STORY = 'sty',
-  LUMIA = 'lumia',
+  STORY = "sty",
+  LUMIA = "lumia",
   FORMNETWORK = "formnetwork",
   HEMI = "hemi",
   MOVE = "move",
@@ -242,59 +252,33 @@ export enum CHAIN {
   COTI = "coti",
   LENS = "lens",
   SSEED = "sseed",
-  AO = 'ao',
-  XRPL_EVM = 'xrplevm',
-  KATANA = 'katana',
-  SOON = 'soon',
-  HYDRAGON = 'hydragon',
+  AO = "ao",
+  XRPL_EVM = "xrplevm",
+  KATANA = "katana",
+  SOON = "soon",
+  SOON_BSC = "soon_bsc",
+  SOON_BASE = "soon_base",
+  HYDRAGON = "hydragon",
   TAC = "tac",
+  NIBIRU = "nibiru",
+  HAVEN1 = "haven1",
+  GRVT = "grvt",
+  SOMNIA = "somnia",
+  ORDERLY = "orderly",
+  CAMP = "camp",
+  PARADEX = "paradex",
+  EDGEX = "edgex",
+  AKASH = "akash",
+  DOGE = "doge",
+  PLASMA = "plasma",
+  QUBIC = "qubic",
+  HIBACHI = "hibachi",
+  SATORI = "satori",
+  SHIBARIUM = "shibarium",
+  AILAYER = "ailayer",
+  MEZO = "mezo",
+  ETHEREAL = "ethereal",
+  FLUENCE = "fluence",
+  MONAD = "monad",
+  SKALE = "skale",
 }
-
-// Don´t use
-const ARBITRUM = "arbitrum";
-const AVAX = "avax";
-const BOBA = "boba";
-const BSC = "bsc";
-const CELO = "celo";
-const ETHEREUM = "ethereum";
-const FANTOM = "fantom";
-const HARMONY = "harmony";
-const HECO = "heco";
-const OKEXCHAIN = "okexchain";
-const OPTIMISM = "optimism";
-const POLYGON = "polygon";
-const RONIN = "ronin";
-const XDAI = "xdai";
-const AURORA = "aurora";
-const MOONRIVER = "moonriver";
-const BITCOIN = "bitcoin";
-const LITECOIN = "litecoin";
-const DOGE = "doge";
-const ZKSYNC = "zksync";
-const MANTLE = "mantle";
-const POLYNOMIAL = "polynomial";
-// Don't use
-export {
-  ARBITRUM,
-  AURORA,
-  AVAX,
-  BITCOIN,
-  BOBA,
-  BSC,
-  CELO,
-  DOGE,
-  ETHEREUM,
-  FANTOM,
-  HARMONY,
-  HECO,
-  LITECOIN,
-  MANTLE,
-  MOONRIVER,
-  OKEXCHAIN,
-  OPTIMISM,
-  POLYGON,
-  RONIN,
-  XDAI,
-  ZKSYNC,
-  POLYNOMIAL,
-};

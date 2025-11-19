@@ -1,6 +1,7 @@
 import { Chain } from "../../adapters/types";
 import { CHAIN } from "../../helpers/chains";
 import ADDRESSES from '../../helpers/coreAssets.json';
+import { METRIC } from "../../helpers/metrics";
 
 type IConfig = {
   [s: string | Chain] : {
@@ -44,6 +45,13 @@ export const CONFIG_FLUID: IConfig = {
     vaultResolverExistAfterTimestamp: 1741205235,
     vaultResolverExistAfterBlock: 68688825,
   },
+  [CHAIN.PLASMA]: {
+    dataStartTimestamp: 1758273257, // ~ before any activity started (block 643135)
+    revenueResolverExistAfterBlock: 1344397,
+    // vault resolver related revenue only exists after this timestamp. revenue / fees before are negligible
+    vaultResolverExistAfterTimestamp: 1758273257,
+    vaultResolverExistAfterBlock: 1344397,
+  }
 };
 
 export const ABI: any = {
@@ -93,6 +101,23 @@ export const TOPIC0: any = {
 export const METHODOLOGY_FLUID = {
   Fees: "Interest paid by borrowers",
   Revenue: "Percentage of interest going to treasury",
+  ProtocolRevenue: "Percentage of interest going to treasury",
+  HoldersRevenue: "Token buyback from the treasury",
+};
+
+export const BREAKDOWN_METHODOLOGY_FLUID = {
+  Fees: {
+    [METRIC.BORROW_INTEREST]: "Interest paid by borrowers",
+  },
+  Revenue: {
+    [METRIC.BORROW_INTEREST]: "Percentage of interest going to treasury",
+  },
+  ProtocolRevenue: {
+    [METRIC.BORROW_INTEREST]: "Percentage of interest going to treasury",
+  },
+  HoldersRevenue: {
+    [METRIC.TOKEN_BUY_BACK]: "Fluid token buyback from the treasury",
+  },
 };
 
 export const parseInTopic = (address: string): string => {
